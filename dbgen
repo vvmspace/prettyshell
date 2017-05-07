@@ -1,0 +1,11 @@
+#!/bin/bash
+sqldrop="DROP DATABASE $1; DROP USER '$1'@localhost;"
+sqlcreate="CREATE USER '$1'@'localhost' IDENTIFIED BY '$2'; CREATE DATABASE $1 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;; GRANT ALL PRIVILEGES ON $1 . * TO '$1'@localhost;"
+echo "$sqldrop"
+echo "$sqldrop" >~/drop.sql
+echo "$sqlcreate"
+echo "$sqlcreate" >~/create.sql
+mysql -uroot -p <~/drop.sql
+mysql -uroot -p <~/create.sql
+rm ~/drop.sql
+rm ~/create.sql
