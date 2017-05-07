@@ -1,0 +1,2 @@
+#!/bin/bash
+sshfs root@server.vvm.space:/ /server
