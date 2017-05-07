@@ -1,6 +1,10 @@
 # Pretty Shell Scripts
 My repository for git clone.
 Мой репозиторий для удобного хранения.
+## Installation:
+```
+cd ~ && git clone https://github.com/vvmspace/prettyshell && sudo mv ~/prettyshell/* /usr/local/bin && rm -rf ~/prettyshell
+```
 
 ## dbgen
 Generating MySQL database and user with same name. Will ask you for MySQL root password.
