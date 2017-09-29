@@ -5,7 +5,13 @@ echo "$sqldrop"
 echo "$sqldrop" >~/drop.sql
 echo "$sqlcreate"
 echo "$sqlcreate" >~/create.sql
+if [ -n $3 ]
+then
+mysql -uroot --password=$3 <~/drop.sql
+mysql -uroot --password=$3 <~/create.sql
+else
 mysql -uroot -p <~/drop.sql
 mysql -uroot -p <~/create.sql
+fi
 rm ~/drop.sql
 rm ~/create.sql
