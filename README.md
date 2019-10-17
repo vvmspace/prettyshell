@@ -12,7 +12,7 @@ Generating MySQL database and user with same name. Will ask you for MySQL root p
 
 ### Usage:
 ```
-dbgen name password
+dbgen name password root_password
 ```
 
 ## server-mount
